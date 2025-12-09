@@ -1,79 +1,162 @@
-:root{
-  --bg:#071017;
-  --card:#0e1620;
-  --muted:#9aa7b2;
-  --accent:#00c6ff;
-  --accent-2:#6a7cff;
-  --glass: rgba(255,255,255,0.03);
-  --glass-2: rgba(255,255,255,0.02);
-  --shadow: 0 8px 30px rgba(2,10,18,0.6);
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+# index.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bruno Shiraishi - Portfólio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Bruno Shiraishi</h1>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Bem-vindo ao meu portfólio!</h2>
+            <p>Desenvolvedor focado em criar soluções modernas e eficientes.</p>
+        </div>
+        <div class="hero-image">
+            <img src="assets/profile.jpg" alt="Foto de Bruno" />
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre Mim</h2>
+        <p>
+            Sou estudante e desenvolvedor com experiência em Java, Spring Boot, HTML, CSS e GitHub Pages.
+            Meu foco é criar projetos bem estruturados e de alta qualidade.
+        </p>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2>Projetos</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Sistema Imobiliário</h3>
+                <p>Projeto em Spring Boot com funcionalidades de compra, venda e aluguel.</p>
+            </div>
+            <div class="card">
+                <h3>Análise Econômica - Camil</h3>
+                <p>Análise econômico-financeira completa utilizando dados da B3.</p>
+            </div>
+            <div class="card">
+                <h3>Sistema de Viagens</h3>
+                <p>Projeto acadêmico com padrões de projeto e arquitetura MVC.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2>Contato</h2>
+        <p>Email: brunoshiraishi@gmail.com</p>
+        <p>GitHub: github.com/BrunoShiraishi</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Bruno Shiraishi</p>
+    </footer>
+</body>
+</html>
+```
+
+---
+
+# style.css
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;background:linear-gradient(180deg,#04101a 0%, #07131a 100%);color:#dbe7ef;}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-
-/* Page layout */
-.page{min-height:100vh;display:flex;flex-direction:column}
-.hero{padding:48px 20px 28px;background:
-  radial-gradient(600px 200px at 10% 10%, rgba(106,124,255,0.06), transparent 10%),
-  linear-gradient(180deg, rgba(0,0,0,0.2), transparent);
-  border-bottom:1px solid rgba(255,255,255,0.03);
-}
-.hero-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:28px}
-.avatar-wrap{position:relative;width:150px;height:150px;flex-shrink:0}
-.avatar{
-  width:150px;height:150px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.06);display:block;
-  filter:contrast(1.05) saturate(1.05);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-  transform:translateZ(0);
-}
-.avatar-glow{
-  position:absolute;inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:220px;height:220px;border-radius:50%;
-  background: radial-gradient(circle at 30% 30%, rgba(0,198,255,0.12), rgba(106,124,255,0.08) 40%, transparent 60%);
-  filter:blur(18px);z-index:-1;pointer-events:none;
+body {
+    background: #f5f5f5;
+    color: #333;
 }
 
-/* Intro */
-.intro{flex:1}
-.name{font-weight:700;font-size:28px;margin:0;color:#fff;letter-spacing:0.2px}
-.tagline{color:var(--muted);margin:8px 0 18px;font-size:15px;max-width:720px}
-.btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#041017;font-weight:600;margin-right:10px;box-shadow: 0 8px 20px rgba(10,60,90,0.12)}
-.btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.04)}
-
-/* Container and cards */
-.container{max-width:1000px;margin:32px auto;padding:0 20px;display:grid;grid-template-columns:1fr;gap:18px}
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border-radius:12px;padding:20px;border:1px solid rgba(255,255,255,0.03);box-shadow:var(--shadow)}
-.about p{color:var(--muted);line-height:1.6;margin:0 0 12px}
-.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;padding:0;list-style:none}
-.skills li{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:8px 12px;border-radius:10px;color:var(--muted);font-size:13px;border:1px solid rgba(255,255,255,0.02)}
-
-/* Projects grid */
-.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:12px}
-.project{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.02)}
-.project h3{margin:0 0 6px;color:#fff;font-size:16px}
-.project p{margin:0 0 10px;color:var(--muted);font-size:14px}
-.project .meta{font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:8px}
-.project .link{display:inline-block;padding:6px 10px;border-radius:8px;background:rgba(0,198,255,0.06);color:var(--accent);font-weight:600}
-
-/* Contact */
-.contact ul{margin:8px 0 0;padding:0;list-style:none;color:var(--muted)}
-.contact li{margin-bottom:6px}
-
-/* Footer */
-.footer{margin-top:auto;padding:18px 20px;text-align:center;color:rgba(255,255,255,0.35);font-size:13px;border-top:1px solid rgba(255,255,255,0.02)}
-
-/* Responsive */
-@media (max-width:820px){
-  .hero-inner{flex-direction:row;gap:18px}
-  .avatar-wrap{width:120px;height:120px}
-  .avatar{width:120px;height:120px}
-  .name{font-size:22px}
-  .container{margin-top:20px}
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
 }
-@media (max-width:540px){
-  .hero-inner{flex-direction:column;align-items:center;text-align:center}
-  .intro{margin-top:10px}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+}
+
+.hero-image img {
+    width: 260px;
+    border-radius: 20px;
+    object-fit: cover;
+    height: 330px; /* aumenta a área visível para mostrar o cabelo */
+}
+
+.sobre, .projetos, .contato {
+    padding: 60px;
+    background: white;
+    margin: 40px auto;
+    border-radius: 15px;
+    width: 80%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #666;
+}
+```
