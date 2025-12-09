@@ -1,189 +1,75 @@
-# index.html
-
-```html
-<!-- Updated futuristic dark + blue theme + Sobre Mim -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio - Bruno Shiraishi</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Bruno Shiraishi - Portfólio</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <header class="hero">
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Foto de perfil" class="profile-pic" />
+        </div>
+        <h1>Bruno Hideo Silva Shiraishi</h1>
+        <p class="subtitle">Desenvolvedor Backend • Java • Spring Boot • APIs REST • Inteligência Artificial</p>
+        
+        <div class="buttons">
+            <a href="#projetos" class="btn-primary">Ver projetos</a>
+            <a href="#contato" class="btn-secondary">Contato</a>
+        </div>
+    </header>
 
-    <div class="container">
+    <section id="sobre" class="card">
+        <h2>Sobre</h2>
+        <p>
+            Sou desenvolvedor focado em backend com sólida base em Java e Spring Boot, com interesse
+            e estudos em Inteligência Artificial e implantação de soluções escaláveis. Valorizo arquitetura
+            limpa, testes automatizados e código bem documentado.
+        </p>
 
-        <!-- Perfil -->
-        <section class="profile-section">
-            <img src="profile.jpg" alt="Foto de Perfil" class="profile-image" />
-            <h1 class="profile-name">Bruno Shiraishi</h1>
-            <h2 class="profile-title">Desenvolvedor Java • Spring Boot • Projetos Acadêmicos</h2>
-        </section>
+        <div class="tags">
+            <span>Java</span><span>OOP</span><span>Spring Boot</span>
+            <span>XGBoost</span><span>Machine Learning</span><span>ROC-AUC</span>
+            <span>APIs REST</span><span>Padrões de Projeto</span><span>JUnit</span>
+            <span>Docker</span><span>Git</span><span>SQL (MySQL/Postgres)</span>
+        </div>
 
-        <!-- Sobre Mim -->
-        <section class="section">
-            <h2>Sobre Mim</h2>
-            <p>
-                Sou estudante e desenvolvedor focado em <strong>Java e Spring Boot</strong>, com experiência em
-                criar sistemas acadêmicos bem estruturados, seguindo boas práticas como <strong>MVC</strong>,
-                <strong>Padrões de Projeto</strong> (Builder, Factory, Singleton, Command) e modelagem baseada em
-                orientação a objetos.
-            </p>
-            <p>
-                Tenho projetos completos como sistemas imobiliários, clínicas veterinárias e plataformas de viagens.
-                Busco sempre melhorar minha arquitetura, organização do código e experiência do usuário.
-            </p>
-        </section>
+        <a class="tag-link" href="https://brunoshiraishi.github.io" target="_blank">brunoshiraishi.github.io</a>
+    </section>
 
-        <!-- Projetos -->
-        <section class="section">
-            <h2>Projetos</h2>
+    <section id="projetos" class="projects-section">
+        <h2>Projetos em destaque</h2>
 
-            <div class="project-item">
-                <h3>🏡 Sistema Imobiliário</h3>
-                <a class="btn-secondary" target="_blank" href="https://github.com/BrunoShiraishi/Imobiliaria">Ver Projeto</a>
-            </div>
+        <div class="project-card">
+            <h3>Sistema de Imobiliária</h3>
+            <p>API em Spring Boot com CRUD, DTOs, camadas separadas e documentação.</p>
+            <small>Tech: Java · Spring Boot · JPA</small>
+            <a href="https://github.com/BrunoShiraishi/Imobiliaria" class="repo-btn" target="_blank">Ver repositório</a>
+        </div>
 
-            <div class="project-item">
-                <h3>✈ Sistema de Viagens</h3>
-                <a class="btn-secondary" target="_blank" href="https://github.com/BrunoShiraishi">Ver Projeto</a>
-            </div>
+        <div class="project-card">
+            <h3>Sistema de Viagens (Padrões)</h3>
+            <p>Projeto acadêmico demonstrando padrões (Builder, Factory, Command, Singleton) com arquitetura MVC.</p>
+            <small>Tech: Java · Padrões de Projeto</small>
+            <a href="https://github.com/BrunoShiraishi/SistemaViagens" class="repo-btn" target="_blank">Ver repositório</a>
+        </div>
 
-            <div class="project-item">
-                <h3>🐾 Clínica Veterinária</h3>
-                <a class="btn-secondary" target="_blank" href="https://github.com/BrunoShiraishi">Ver Projeto</a>
-            </div>
-        </section>
+        <div class="project-card">
+            <h3>Estudos em Inteligência Artificial</h3>
+            <p>Repositório com experimentos, notas e avaliação de modelos (ROC-AUC, overfitting, XGBoost).</p>
+            <small>Tech: Python · XGBoost</small>
+            <a href="https://github.com/BrunoShiraishi/IA-Estudos" class="repo-btn" target="_blank">Ver repositório</a>
+        </div>
+    </section>
 
-    </div>
+    <section id="contato" class="card">
+        <h2>Contato</h2>
+        <p>Interessado em colaborar ou conversar sobre vagas e projetos? Me envie uma mensagem:</p>
 
+        <p><strong>Email:</strong> brunno.shiraishi@outlook.com</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bruno-shiraishi-a71951278/" target="_blank">Meu LinkedIn</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/BrunoShiraishi" target="_blank">github.com/BrunoShiraishi</a></p>
+    </section>
 </body>
 </html>
-```
-
----
-
-# style.css
-
-```css
-/* =============================
-   TEMA FUTURISTA DARK + AZUL
-============================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
-}
-
-body {
-    background: #0c0f12; /* fundo escuro tech */
-    color: #e0e0e0;
-    line-height: 1.6;
-}
-
-.container {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* =============================
-   FOTO DE PERFIL
-============================= */
-.profile-section {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.profile-image {
-    width: 210px;
-    height: 210px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top; /* MOSTRA MAIS CABELO */
-    border: 4px solid #1e90ff;
-    box-shadow: 0px 0px 25px rgba(30, 144, 255, 0.5);
-    transition: 0.3s ease;
-}
-
-.profile-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 35px rgba(30, 144, 255, 0.8);
-}
-
-.profile-name {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-top: 15px;
-    color: #ffffff;
-    text-shadow: 0 0 12px rgba(30, 144, 255, 0.7);
-}
-
-.profile-title {
-    font-size: 1.2rem;
-    color: #8bb7ff;
-    margin-top: 5px;
-}
-
-/* =============================
-   SEÇÕES
-============================= */
-.section {
-    background: #11141a;
-    border: 1px solid #1e2530;
-    padding: 25px;
-    border-radius: 14px;
-    margin-bottom: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    transition: 0.3s ease;
-}
-
-.section:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 25px rgba(30, 144, 255, 0.35);
-}
-
-.section h2 {
-    color: #1e90ff;
-    margin-bottom: 18px;
-    font-size: 1.8rem;
-    text-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
-}
-
-/* =============================
-   BOTÕES
-============================= */
-.btn-secondary {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    background: #1e90ff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    margin-top: 12px;
-    transition: 0.3s;
-    font-weight: bold;
-    box-shadow: 0 0 12px rgba(30, 144, 255, 0.4);
-}
-
-.btn-secondary:hover {
-    background: #3fa4ff;
-    box-shadow: 0 0 20px rgba(30, 144, 255, 0.8);
-}
-
-/* =============================
-   RESPONSIVIDADE
-============================= */
-@media (max-width: 768px) {
-    .profile-image {
-        width: 160px;
-        height: 160px;
-    }
-    .profile-name {
-        font-size: 1.7rem;
-    }
-}
-```
