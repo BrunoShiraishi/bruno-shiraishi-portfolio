@@ -1,95 +1,162 @@
-<!doctype html>
+# index.html
+
+```html
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bruno Hideo Silva Shiraishi — Portfólio</title>
-  <meta name="description" content="Portfólio profissional de Bruno Hideo Silva Shiraishi — Desenvolvedor Java, Spring Boot e Inteligência Artificial" />
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bruno Shiraishi - Portfólio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="page">
-    <header class="hero">
-      <div class="hero-inner">
-        <div class="avatar-wrap">
-          <!-- Coloque a sua foto em assets/profile.jpg -->
-          <img src="assets/profile.jpg" alt="Bruno Hideo Silva Shiraishi" class="avatar">
-          <div class="avatar-glow"></div>
-        </div>
-        <div class="intro">
-          <h1 class="name">Bruno Hideo Silva Shiraishi</h1>
-          <p class="tagline">Desenvolvedor Backend • Java · Spring Boot · APIs REST • Inteligência Artificial</p>
-          <p class="cta">
-            <a href="#projects" class="btn">Ver projetos</a>
-            <a href="#contact" class="btn ghost">Contato</a>
-          </p>
-        </div>
-      </div>
+    <header>
+        <nav>
+            <h1>Bruno Shiraishi</h1>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-      <section id="about" class="card about">
-        <h2>Sobre</h2>
-        <p>Sou desenvolvedor focado em backend com sólida base em Java e Spring Boot, com interesse e estudos em Inteligência Artificial e implantação de soluções escaláveis. Valorizo arquitetura limpa, testes automatizados e código bem documentado.</p>
-        <ul class="skills">
-          <li>Java • OOP • Spring Boot</li>
-          <li>XGBoost • Aprendizado de Máquina • Avaliação (ROC-AUC)</li>
-          <li>APIs REST • Design patterns • Testes (JUnit)</li>
-          <li>Docker • Git • SQL (MySQL/Postgres)</li>
-        </ul>
-      </section>
-
-      <section id="projects" class="card projects">
-        <h2>Projetos em destaque</h2>
-
-        <div class="project-grid">
-          <article class="project">
-            <h3>Sistema de Imobiliária</h3>
-            <p>API em Spring Boot com CRUD, DTOs, camadas separadas (Controller / Service / Repository) e documentação.</p>
-            <p class="meta">Tech: Java · Spring Boot · JPA</p>
-            <a class="link" href="https://github.com/BrunoShiraishi/crud-imoveis" target="_blank" rel="noopener noreferrer">Ver repositório</a>
-          </article>
-
-          <article class="project">
-            <h3>Sistema de Viagens (Padrões)</h3>
-            <p>Projeto acadêmico demonstrando padrões (Builder, Factory, Command, Singleton) com arquitetura MVC.</p>
-            <p class="meta">Tech: Java · Padrões de Projeto</p>
-            <a class="link" href="https://github.com/BrunoShiraishi/travel-system-patterns" target="_blank" rel="noopener noreferrer">Ver repositório</a>
-          </article>
-
-          <article class="project">
-            <h3>Estudos em Inteligência Artificial</h3>
-            <p>Repositório com experimentos, notas e avaliação de modelos (ROC-AUC, overfitting, XGBoost).</p>
-            <p class="meta">Tech: Python · XGBoost</p>
-            <a class="link" href="https://github.com/BrunoShiraishi/estudos-inteligencia-artificial-bruno" target="_blank" rel="noopener noreferrer">Ver repositório</a>
-          </article>
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Bem-vindo ao meu portfólio!</h2>
+            <p>Desenvolvedor focado em criar soluções modernas e eficientes.</p>
         </div>
-      </section>
+        <div class="hero-image">
+            <img src="assets/profile.jpg" alt="Foto de Bruno" />
+        </div>
+    </section>
 
-      <section id="contact" class="card contact">
+    <section id="sobre" class="sobre">
+        <h2>Sobre Mim</h2>
+        <p>
+            Sou estudante e desenvolvedor com experiência em Java, Spring Boot, HTML, CSS e GitHub Pages.
+            Meu foco é criar projetos bem estruturados e de alta qualidade.
+        </p>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2>Projetos</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Sistema Imobiliário</h3>
+                <p>Projeto em Spring Boot com funcionalidades de compra, venda e aluguel.</p>
+            </div>
+            <div class="card">
+                <h3>Análise Econômica - Camil</h3>
+                <p>Análise econômico-financeira completa utilizando dados da B3.</p>
+            </div>
+            <div class="card">
+                <h3>Sistema de Viagens</h3>
+                <p>Projeto acadêmico com padrões de projeto e arquitetura MVC.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
         <h2>Contato</h2>
-        <p>Interessado em colaborar ou conversar sobre vagas e projetos? Me envie uma mensagem:</p>
-        <ul>
-          <li><strong>Email:</strong> seuemail@exemplo.com</li>
-          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/seu-linkedin" target="_blank" rel="noopener noreferrer">linkedin.com/in/seu-linkedin</a></li>
-          <li><strong>GitHub:</strong> <a href="https://github.com/BrunoShiraishi" target="_blank" rel="noopener noreferrer">github.com/BrunoShiraishi</a></li>
-        </ul>
-      </section>
-    </main>
+        <p>Email: brunoshiraishi@gmail.com</p>
+        <p>GitHub: github.com/BrunoShiraishi</p>
+    </section>
 
-    <footer class="footer">
-      <p>© <span id="year"></span> Bruno H. S. Shiraishi — Desenvolvedor</p>
+    <footer>
+        <p>© 2025 Bruno Shiraishi</p>
     </footer>
-  </div>
-
-  <script>
-    // coloca o ano atual no rodapé
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
+```
+
+---
+
+# style.css
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+}
+
+.hero-image img {
+    width: 260px;
+    border-radius: 20px;
+    object-fit: cover;
+    height: 330px; /* aumenta a área visível para mostrar o cabelo */
+}
+
+.sobre, .projetos, .contato {
+    padding: 60px;
+    background: white;
+    margin: 40px auto;
+    border-radius: 15px;
+    width: 80%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #666;
+}
+```
