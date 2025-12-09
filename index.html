@@ -1,58 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruno Shiraishi - Portfólio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bruno Shiraishi • Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <nav class="navbar">
+      <h1 class="logo">Bruno<span>Shiraishi</span></h1>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
 
-    <header class="topo">
-        <div class="container-topo">
-            <img src="profile.jpg" alt="Foto de Bruno Shiraishi" class="foto-perfil">
-            <h1>Bruno Shiraishi</h1>
-            <p>Desenvolvedor Java • Spring Boot • Análise de Dados</p>
-        </div>
-    </header>
+    <div class="hero-content">
+      <h2>Desenvolvedor Java & Entusiasta de Tecnologia</h2>
+      <p>Transformando ideias em soluções digitais modernas.</p>
+      <a href="https://github.com/BrunoShiraishi" class="btn" target="_blank">Meu GitHub</a>
+    </div>
+  </header>
 
-    <section class="sobre">
-        <h2>Sobre Mim</h2>
+  <section id="sobre" class="section sobre">
+    <h2>Sobre Mim</h2>
+    <div class="sobre-container">
+      <img src="assets/profile.jpg" alt="Foto Bruno" class="profile-img">
+      <div>
         <p>
-            Sou um desenvolvedor focado em criar soluções inteligentes com Java, Spring Boot,
-            APIs REST e arquitetura limpa. Também trabalho com análise de dados e automações.
-            Busco sempre evoluir, aprender novas tecnologias e construir projetos profissionais
-            com boas práticas e qualidade.
+          Olá! Meu nome é <strong>Bruno Shiraishi</strong>, sou estudante e desenvolvedor apaixonado por tecnologia,
+          especialmente focado em Java, APIs, Spring Boot e boas práticas de arquitetura.
+          Adoro criar soluções modernas, limpas e eficientes, além de desenvolver projetos que unem lógica,
+          design e funcionalidade.
         </p>
-    </section>
+        <p>
+          Atualmente desenvolvo projetos acadêmicos e pessoais, explorando padrões de projeto, MVC, backend, e
+          integrações com banco de dados.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <section class="projetos">
-        <h2>Projetos</h2>
+  <section id="projetos" class="section projetos">
+    <h2>Projetos em Destaque</h2>
+    <div class="grid-projetos">
+      <div class="card">
+        <h3>Imobiliária Spring Boot</h3>
+        <p>API completa com compra, venda e aluguel de casas.</p>
+        <a href="https://github.com/BrunoShiraishi" target="_blank">Ver Projeto</a>
+      </div>
+      <div class="card">
+        <h3>Análise Financeira • Camil</h3>
+        <p>Estudo baseado em dados oficiais da B3 (2022–2023).</p>
+        <a href="https://github.com/BrunoShiraishi" target="_blank">Ver Projeto</a>
+      </div>
+      <div class="card">
+        <h3>Clínica Veterinária – Java OOP</h3>
+        <p>Sistema com composição, herança e polimorfismo.</p>
+        <a href="https://github.com/BrunoShiraishi" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+  </section>
 
-        <div class="grid-projetos">
+  <section id="contato" class="section contato">
+    <h2>Contato</h2>
+    <p>Entre em contato para oportunidades, projetos ou dúvidas.</p>
+    <div class="socials">
+      <a href="mailto:seuemail@gmail.com">Email</a>
+      <a href="https://github.com/BrunoShiraishi" target="_blank">GitHub</a>
+    </div>
+  </section>
 
-            <a href="https://github.com/BrunoShiraishi/sistema-imobiliaria" target="_blank" class="card">
-                <h3>Sistema Imobiliária</h3>
-                <p>Projeto completo em Spring Boot com aluguel, compra e venda.</p>
-            </a>
-
-            <a href="https://github.com/BrunoShiraishi/NutriScan" target="_blank" class="card">
-                <h3>NutriScan</h3>
-                <p>Sistema acadêmico com arquitetura MVC e padrões de projeto.</p>
-            </a>
-
-            <a href="https://github.com/BrunoShiraishi" target="_blank" class="card">
-                <h3>Mais Projetos</h3>
-                <p>Veja todos os meus projetos no GitHub.</p>
-            </a>
-
-        </div>
-    </section>
-
-    <footer class="rodape">
-        <p>© 2025 Bruno Shiraishi — Todos os direitos reservados.</p>
-    </footer>
-
+  <footer>
+    <p>© 2025 Bruno Shiraishi — Portfólio</p>
+  </footer>
 </body>
 </html>
