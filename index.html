@@ -1,71 +1,63 @@
 # index.html
 
 ```html
+<!-- Updated futuristic dark + blue theme + Sobre Mim -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bruno Shiraishi - Portfólio</title>
+    <title>Portfólio - Bruno Shiraishi</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Bruno Shiraishi</h1>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Bem-vindo ao meu portfólio!</h2>
-            <p>Desenvolvedor focado em criar soluções modernas e eficientes.</p>
-        </div>
-        <div class="hero-image">
-            <img src="assets/profile.jpg" alt="Foto de Bruno" />
-        </div>
-    </section>
+    <div class="container">
 
-    <section id="sobre" class="sobre">
-        <h2>Sobre Mim</h2>
-        <p>
-            Sou estudante e desenvolvedor com experiência em Java, Spring Boot, HTML, CSS e GitHub Pages.
-            Meu foco é criar projetos bem estruturados e de alta qualidade.
-        </p>
-    </section>
+        <!-- Perfil -->
+        <section class="profile-section">
+            <img src="profile.jpg" alt="Foto de Perfil" class="profile-image" />
+            <h1 class="profile-name">Bruno Shiraishi</h1>
+            <h2 class="profile-title">Desenvolvedor Java • Spring Boot • Projetos Acadêmicos</h2>
+        </section>
 
-    <section id="projetos" class="projetos">
-        <h2>Projetos</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Sistema Imobiliário</h3>
-                <p>Projeto em Spring Boot com funcionalidades de compra, venda e aluguel.</p>
+        <!-- Sobre Mim -->
+        <section class="section">
+            <h2>Sobre Mim</h2>
+            <p>
+                Sou estudante e desenvolvedor focado em <strong>Java e Spring Boot</strong>, com experiência em
+                criar sistemas acadêmicos bem estruturados, seguindo boas práticas como <strong>MVC</strong>,
+                <strong>Padrões de Projeto</strong> (Builder, Factory, Singleton, Command) e modelagem baseada em
+                orientação a objetos.
+            </p>
+            <p>
+                Tenho projetos completos como sistemas imobiliários, clínicas veterinárias e plataformas de viagens.
+                Busco sempre melhorar minha arquitetura, organização do código e experiência do usuário.
+            </p>
+        </section>
+
+        <!-- Projetos -->
+        <section class="section">
+            <h2>Projetos</h2>
+
+            <div class="project-item">
+                <h3>🏡 Sistema Imobiliário</h3>
+                <a class="btn-secondary" target="_blank" href="https://github.com/BrunoShiraishi/Imobiliaria">Ver Projeto</a>
             </div>
-            <div class="card">
-                <h3>Análise Econômica - Camil</h3>
-                <p>Análise econômico-financeira completa utilizando dados da B3.</p>
-            </div>
-            <div class="card">
-                <h3>Sistema de Viagens</h3>
-                <p>Projeto acadêmico com padrões de projeto e arquitetura MVC.</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="contato" class="contato">
-        <h2>Contato</h2>
-        <p>Email: brunoshiraishi@gmail.com</p>
-        <p>GitHub: github.com/BrunoShiraishi</p>
-    </section>
+            <div class="project-item">
+                <h3>✈ Sistema de Viagens</h3>
+                <a class="btn-secondary" target="_blank" href="https://github.com/BrunoShiraishi">Ver Projeto</a>
+            </div>
 
-    <footer>
-        <p>© 2025 Bruno Shiraishi</p>
-    </footer>
+            <div class="project-item">
+                <h3>🐾 Clínica Veterinária</h3>
+                <a class="btn-secondary" target="_blank" href="https://github.com/BrunoShiraishi">Ver Projeto</a>
+            </div>
+        </section>
+
+    </div>
+
 </body>
 </html>
 ```
@@ -75,88 +67,123 @@
 # style.css
 
 ```css
+/* =============================
+   TEMA FUTURISTA DARK + AZUL
+============================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", sans-serif;
 }
 
 body {
-    background: #f5f5f5;
-    color: #333;
+    background: #0c0f12; /* fundo escuro tech */
+    color: #e0e0e0;
+    line-height: 1.6;
 }
 
-header {
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 15px 30px;
-    position: sticky;
-    top: 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px;
-}
-
-.hero-text h2 {
-    font-size: 2.5rem;
-}
-
-.hero-image img {
-    width: 260px;
-    border-radius: 20px;
-    object-fit: cover;
-    height: 330px; /* aumenta a área visível para mostrar o cabelo */
-}
-
-.sobre, .projetos, .contato {
-    padding: 60px;
-    background: white;
-    margin: 40px auto;
-    border-radius: 15px;
-    width: 80%;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #fafafa;
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-footer {
+/* =============================
+   FOTO DE PERFIL
+============================= */
+.profile-section {
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    color: #666;
+    margin-bottom: 40px;
+}
+
+.profile-image {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top; /* MOSTRA MAIS CABELO */
+    border: 4px solid #1e90ff;
+    box-shadow: 0px 0px 25px rgba(30, 144, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 35px rgba(30, 144, 255, 0.8);
+}
+
+.profile-name {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(30, 144, 255, 0.7);
+}
+
+.profile-title {
+    font-size: 1.2rem;
+    color: #8bb7ff;
+    margin-top: 5px;
+}
+
+/* =============================
+   SEÇÕES
+============================= */
+.section {
+    background: #11141a;
+    border: 1px solid #1e2530;
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(30, 144, 255, 0.35);
+}
+
+.section h2 {
+    color: #1e90ff;
+    margin-bottom: 18px;
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+}
+
+/* =============================
+   BOTÕES
+============================= */
+.btn-secondary {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #1e90ff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 12px;
+    transition: 0.3s;
+    font-weight: bold;
+    box-shadow: 0 0 12px rgba(30, 144, 255, 0.4);
+}
+
+.btn-secondary:hover {
+    background: #3fa4ff;
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.8);
+}
+
+/* =============================
+   RESPONSIVIDADE
+============================= */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 160px;
+        height: 160px;
+    }
+    .profile-name {
+        font-size: 1.7rem;
+    }
 }
 ```
